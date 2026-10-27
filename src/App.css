@@ -1,0 +1,520 @@
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ========================================
+   PAGE CONTAINER
+======================================== */
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #000000;
+
+  /*
+    Avoid overflow:hidden here because it can
+    interfere with fixed-position elements.
+  */
+}
+
+/* ========================================
+   MAIN PAGE CONTENT
+======================================== */
+
+.page-content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 88px;
+  text-align: center;
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Anchor navigation offset */
+
+#home,
+#about,
+#skills,
+#projects,
+#certificates,
+#contact {
+  scroll-margin-top: 100px;
+}
+
+/* ========================================
+   OPENING SHEETS
+======================================== */
+
+.sheet {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 10001;
+
+  background-color: #7ceff3;
+  transition: transform 1.2s ease-in-out;
+  will-change: transform;
+}
+
+.sheet-left {
+  left: 0;
+}
+
+.sheet-right {
+  right: 0;
+  background-color: #000000;
+  background-image: url("/images/Developer1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Opening animation */
+
+.sheet-left-open {
+  transform: translateX(-100%);
+}
+
+.sheet-right-open {
+  transform: translateX(100%);
+}
+
+/* ========================================
+   CENTER OPEN BUTTON
+======================================== */
+
+.open-btn {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10002;
+  padding: 14px 35px;
+  border-radius: 30px;
+}
+
+/* ========================================
+   EXPLORE BUTTON
+======================================== */
+
+.explore-btn {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10002;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 16px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  backdrop-filter: blur(12px);
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #ffffff;
+  color: #172033;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  letter-spacing: 2.5px;
+}
+
+.explore-arrow {
+  display: inline-block;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover .explore-arrow {
+  transform: translate(4px, -4px);
+}
+
+.explore-btn:active {
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+.explore-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 5px;
+}
+
+/* ========================================
+   LEFT SHEET CONTENT
+======================================== */
+
+.left-sheet-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+
+  width: 80%;
+  color: #ffffff;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 14px;
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+
+  background: rgba(246, 248, 247, 0.12);
+  color: #00ff0d;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #00fd00;
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.6);
+
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+.portfolio-label {
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.left-sheet-content h1 {
+  font-size: clamp(28px, 4vw, 54px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.left-sheet-content h1 span {
+  color: #000000;
+}
+
+.left-sheet-content h2 {
+  font-size: clamp(18px, 3vw, 28px);
+}
+
+.left-sheet-content h3 {
+  margin-top: 22px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.tagline {
+  margin-top: 12px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.close-btn {
+  position: fixed !important;
+  top: 20px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+  z-index: 10003;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+  .page-content {
+    padding-top: 76px;
+  }
+
+  .sheet-left {
+    overflow: hidden;
+  }
+
+  .left-sheet-content {
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    overflow-wrap: break-word;
+  }
+
+  .left-sheet-content h1 {
+    font-size: clamp(22px, 5vw, 36px);
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+  }
+
+  .left-sheet-content h1 span {
+    display: inline;
+    max-width: 100%;
+    font-size: inherit;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .left-sheet-content h2 {
+    font-size: clamp(16px, 4vw, 22px);
+  }
+
+  .portfolio-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+
+  .explore-btn {
+    top: auto;
+    bottom: 100px;
+    left: 50%;
+    max-width: calc(100% - 32px);
+    padding: 12px 16px;
+    transform: translateX(-50%);
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .explore-btn:active {
+    transform: translateX(-50%) scale(0.96);
+  }
+
+  .close-btn {
+    top: 20px;
+    right: 20px;
+    bottom: auto;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .page-content {
+    padding-top: 72px;
+  }
+
+  .left-sheet-content {
+    padding: 0 16px;
+  }
+
+  .left-sheet-content h1 {
+    font-size: clamp(18px, 5.8vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    overflow-wrap: anywhere;
+  }
+
+  .left-sheet-content h1 span {
+    letter-spacing: inherit;
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+
+  .explore-btn {
+    bottom: 80px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .sheet,
+  .explore-btn,
+  .explore-arrow {
+    transition-duration: 0.01ms;
+  }
+
+  .status-dot {
+    animation: none;
+  }
+}
+
+/* Fixed header */
+.pro-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+}
+
+/* Keep content below the fixed header */
+.page-content {
+  padding-top: 88px;
+  text-align: center;
+}
+
+/* Correct section navigation positioning */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 15px;
+}
+
+#home,
+#about,
+#skills,
+#projects,
+#certificates,
+#contact {
+  scroll-margin-top: 0;
+}
+
+/* Responsive header heights */
+@media (max-width: 991.98px) {
+  .page-content {
+    padding-top: 76px;
+  }
+
+  html {
+    scroll-padding-top: 76px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-content {
+    padding-top: 72px;
+  }
+
+  html {
+    scroll-padding-top: 72px;
+  }
+}
+
+/* Header hidden during the intro screen */
+.header-hidden,
+.header-visible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    visibility 0.8s ease;
+}
+
+.header-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+.header-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Keep the main content below the fixed header */
+.page-content {
+  padding-top: 88px;
+}
+
+@media (max-width: 991.98px) {
+  .page-content {
+    padding-top: 76px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-content {
+    padding-top: 72px;
+  }
+}
+@media (max-width: 767px) {
+  .left-sheet-content h1 span {
+    font-size: clamp(20px, 5.5vw, 32px);
+    letter-spacing: -1.2px;
+    white-space: nowrap;
+  }
+}
+
+
+
+.page-content section {
+  scroll-margin-top: 90px;
+}
