@@ -94,11 +94,11 @@ export default function Home() {
             </button>
 
             <a
-              href="/Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="home-btn secondary-btn"
-            >
+  href={`${import.meta.env.BASE_URL}Resume.pdf`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="home-btn secondary-btn"
+>
               Resume
             </a>
           </div>
@@ -114,10 +114,10 @@ export default function Home() {
 
           <div className="image-frame">
             <img
-              src="/images/Profile.png"
-              alt="Mohanakannan, Software Developer"
-              className="developer-image"
-            />
+      src={`${import.meta.env.BASE_URL}images/Profile.png`}
+      alt="Mohanakannan, Software Developer"
+      className="developer-image"
+    />
           </div>
 
           <div className="floating-card card-top">
