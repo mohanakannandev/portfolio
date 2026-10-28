@@ -1,16 +1,86 @@
-# React + Vite
+# 💼 Personal Portfolio – Mohanakannan L.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This website showcases my background, technical skills, projects, and interest in software development.
 
-Currently, two official plugins are available:
+🌐 **Live Website:** https://mohanakannandev.github.io/portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👨‍💻 About Me
 
-## React Compiler
+I am a B.Tech Information Technology graduate passionate about software development, web technologies, and building practical applications. I enjoy learning new technologies, solving problems, and improving my development skills through hands-on projects.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+- **Frontend:** React.js, JavaScript, HTML5, CSS3
+- **Styling:** Bootstrap
+- **Build Tool:** Vite
+- **Version Control:** Git and GitHub
+- **Deployment:** GitHub Pages with GitHub Actions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Responsive portfolio website
+- Personal introduction and profile section
+- Technical skills showcase
+- Project highlights
+- Resume access
+- Social and professional profile links
+
+## 🚀 Featured Projects
+
+### 1. ThreatGuard – AI Cyber Threat Intelligence & Auto-Defense System
+A cybersecurity project designed to collect threat intelligence, analyze potential threats using AI, calculate risk scores, and support automated IP blocking.
+
+**Technologies:** Python, Flask, React, SQLite, Gemini API, AlienVault OTX
+
+### 2. Disease Prediction System
+A machine learning project that uses data preprocessing and classification algorithms to predict potential diseases based on input features.
+
+**Technologies:** Python, Scikit-learn, Pandas, NumPy, MySQL
+
+## 💻 Run Locally
+
+To run this project on your computer:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/mohanakannandev/portfolio.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd portfolio
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## 🌍 Deployment
+
+This portfolio is hosted using **GitHub Pages**. GitHub Actions automatically builds and deploys updates pushed to the `main` branch.
+
+## 📬 Connect With Me
+
+- **GitHub:** https://github.com/mohanakannandev
+- **LinkedIn:** https://linkedin.com/in/mohanakannan-l
+- **Portfolio:** https://mohanakannandev.github.io/portfolio/
+
+## 📄 License
+
+This project is intended to showcase my personal portfolio and development work.
+
+---
+
+⭐ Thank you for visiting my portfolio!
